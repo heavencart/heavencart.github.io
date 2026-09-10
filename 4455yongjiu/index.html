@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4455永久在线视频观看-热门影视剧综高清在线播放平台</title>
+    <meta name="description" content="4455永久在线视频观看平台提供海量高清影视剧集、热门电影、综艺娱乐、动漫番剧等在线观看服务，无需下载安装，即点即播，畅享极致观影体验。" >
+    <meta name="keywords" content="4455永久在线视频观看,在线视频,高清影视,免费电影,电视剧在线,综艺动漫,永久观看地址" >
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f6f8;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        .site-header {
+            background: #141b2d;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #f5c518;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .logo span {
+            color: #fff;
+            font-weight: 400;
+            font-size: 14px;
+            background: #e50914;
+            padding: 2px 8px;
+            border-radius: 4px;
+            letter-spacing: 0;
+        }
+        .search-box {
+            flex: 1;
+            max-width: 480px;
+            display: flex;
+            background: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 10px 16px;
+            font-size: 14px;
+            background: transparent;
+            color: #333;
+        }
+        .search-box button {
+            background: #f5c518;
+            border: none;
+            padding: 0 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #141b2d;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .search-box button:hover {
+            background: #e0b000;
+        }
+        .user-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            color: #ccc;
+            font-size: 14px;
+        }
+        .user-actions a {
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.2s;
+        }
+        .user-actions a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .user-actions .login-btn {
+            background: #e50914;
+            color: #fff;
+        }
+        /* Nav */
+        .main-nav {
+            background: #1c2540;
+            border-bottom: 2px solid #f5c518;
+        }
+        .nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 1280px;
+            padding: 0 20px;
+        }
+        .nav-list li a {
+            display: block;
+            padding: 12px 18px;
+            color: #e0e0e0;
+            font-size: 15px;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+        .nav-list li a:hover,
+        .nav-list li a.active {
+            color: #f5c518;
+            background: rgba(245, 197, 24, 0.08);
+            border-bottom-color: #f5c518;
+        }
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(135deg, #0f1626 0%, #1a2a4a 100%);
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+        }
+        .hero-text h1 {
+            font-size: 34px;
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+        .hero-text h1 i {
+            color: #f5c518;
+            font-style: normal;
+        }
+        .hero-text p {
+            color: #b0c4de;
+            font-size: 16px;
+            margin-bottom: 20px;
+            max-width: 560px;
+        }
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .hero-badges span {
+            background: rgba(245, 197, 24, 0.15);
+            color: #f5c518;
+            border: 1px solid rgba(245, 197, 24, 0.4);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .hero-poster {
+            width: 100%;
+            max-width: 400px;
+            flex-shrink: 0;
+            margin: 0 auto;
+        }
+        .hero-poster img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 16/9;
+            background: #2a3a5a;
+        }
+        /* Section titles */
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 35px 0 18px;
+            padding-left: 12px;
+            border-left: 4px solid #e50914;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .section-title .more-link {
+            font-size: 14px;
+            color: #666;
+            font-weight: 400;
+            border-left: none;
+            padding-left: 0;
+            transition: color 0.2s;
+        }
+        .section-title .more-link:hover {
+            color: #e50914;
+        }
+        /* Cards grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+        }
+        .video-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        .video-thumb {
+            position: relative;
+            aspect-ratio: 2/3;
+            background: #ddd;
+            overflow: hidden;
+        }
+        .video-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            background: #e8e8e8;
+        }
+        .video-thumb .badge {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .video-thumb .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(229, 9, 20, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.2s;
+            color: #fff;
+            font-size: 18px;
+        }
+        .video-card:hover .play-icon {
+            opacity: 1;
+        }
+        .video-info {
+            padding: 10px;
+        }
+        .video-info h3 {
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 4px;
+            color: #222;
+        }
+        .video-info .meta {
+            font-size: 12px;
+            color: #888;
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Featured two-column */
+        .featured-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .category-block {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .category-block h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .category-block h3 a {
+            font-size: 13px;
+            color: #999;
+            font-weight: 400;
+        }
+        .rank-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .rank-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        .rank-item:hover {
+            background: #f8f9fa;
+        }
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background: #eee;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            color: #666;
+        }
+        .rank-item:nth-child(1) .rank-num,
+        .rank-item:nth-child(2) .rank-num,
+        .rank-item:nth-child(3) .rank-num {
+            background: #f5c518;
+            color: #141b2d;
+        }
+        .rank-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .rank-info p {
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .rank-info span {
+            font-size: 12px;
+            color: #aaa;
+        }
+        /* Notice bar */
+        .notice-bar {
+            background: #fffbea;
+            border: 1px solid #ffe58f;
+            border-radius: 8px;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .notice-bar i {
+            color: #faad14;
+            font-style: normal;
+            font-weight: 700;
+        }
+        .notice-bar span {
+            color: #8c6d1f;
+        }
+        /* FAQ */
+        .faq-section {
+            margin: 40px 0;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 8px;
+            padding: 18px 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+        }
+        .faq-item h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #1a1a2e;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .faq-item h4::before {
+            content: "Q";
+            background: #e50914;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+        .faq-item p {
+            color: #555;
+            font-size: 14px;
+            padding-left: 28px;
+        }
+        /* Footer */
+        .site-footer {
+            background: #141b2d;
+            color: #8a8f98;
+            padding: 30px 0 20px;
+            margin-top: 40px;
+            font-size: 13px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .footer-links a {
+            color: #aab;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #f5c518;
+        }
+        .footer-copy {
+            text-align: center;
+            padding-top: 15px;
+            border-top: 1px solid #2a2a3a;
+            color: #666;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .search-box {
+                max-width: 100%;
+            }
+            .user-actions {
+                justify-content: flex-end;
+            }
+            .nav-list li a {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+            .hero-text h1 {
+                font-size: 26px;
+            }
+            .featured-section {
+                grid-template-columns: 1fr;
+            }
+            .video-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 12px;
+            }
+            .section-title {
+                font-size: 20px;
+            }
+            .hero-poster {
+                max-width: 300px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            .video-info h3 {
+                font-size: 13px;
+            }
+            .logo {
+                font-size: 22px;
+            }
+            .nav-list {
+                padding: 0 12px;
+            }
+        }
+        /* Placeholder for image icons */
+        .img-placeholder {
+            background: linear-gradient(145deg, #4a5a7a, #2a3a5a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            letter-spacing: 1px;
+            aspect-ratio: 2/3;
+            width: 100%;
+        }
+        .img-placeholder.landscape {
+            aspect-ratio: 16/9;
+        }
+        .img-placeholder.square {
+            aspect-ratio: 1/1;
+        }
+        .img-placeholder .icon {
+            font-size: 32px;
+            opacity: 0.6;
+        }
+        /* Buttons */
+        .btn-more {
+            display: inline-block;
+            background: #e50914;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn-more:hover {
+            background: #b00710;
+        }
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover {
+            border-color: #e50914;
+            color: #e50914;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <span>▶</span> 4455 视频 <em style="font-style:normal;color:#f5c518;">|</em> 永久在线
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="搜索影片、剧集、综艺..." aria-label="搜索">
+                <button type="button">搜索</button>
+            </div>
+            <div class="user-actions">
+                <a href="#">登录</a>
+                <a href="#" class="login-btn">注册</a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">电影</a></li>
+                <li><a href="#">电视剧</a></li>
+                <li><a href="#">综艺</a></li>
+                <li><a href="#">动漫</a></li>
+                <li><a href="#">纪录片</a></li>
+                <li><a href="#">4K专区</a></li>
+                <li><a href="#">排行榜</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>欢迎来到 <i>4455永久在线视频</i></h1>
+                    <p>海量高清影视资源，热门电影、最新剧集、热门综艺、动漫番剧一网打尽。无需下载，即点即看，畅享极致流畅的在线观影体验。</p>
+                    <div class="hero-badges">
+                        <span>📺 高清流畅</span>
+                        <span>⚡ 极速播放</span>
+                        <span>🆕 每日更新</span>
+                        <span>🔒 永久地址</span>
+                    </div>
+                </div>
+                <div class="hero-poster">
+                    <div class="img-placeholder landscape">
+                        <span class="icon">🎬</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notice Bar -->
+        <div class="container">
+            <div class="notice-bar">
+                <i>公告：</i>
+                <span>🌟 4455永久在线视频已启用全新播放线路，如遇无法播放请刷新或切换线路。本站永久免费，请收藏地址，谨防丢失！</span>
+            </div>
+        </div>
+
+        <!-- Hot Movies Section -->
+        <section class="container">
+            <div class="section-title">
+                <h2>🔥 热门电影推荐</h2>
+                <a href="#" class="more-link">更多电影 →</a>
+            </div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎥</span></div>
+                        <span class="badge">HD</span>
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>星际穿越</h3>
+                        <div class="meta"><span>科幻</span><span>2024</span></div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎥</span></div>
+                        <span class="badge">4K</span>
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>流浪地球3</h3>
+                        <div class="meta"><span>科幻</span><span>2025</span></div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎥</span></div>
+                        <span class="badge">HD</span>
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>长津湖之水门桥</h3>
+                        <div class="meta"><span>战争</span><span>2023</span></div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎥</span></div>
+                        <span class="badge">HD</span>
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>满江红</h3>
+                        <div class="meta"><span>剧情</span><span>2023</span></div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎥</span></div>
+                        <span class="badge">HD</span>
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>速度与激情10</h3>
+                        <div class="meta"><span>动作</span><span>2024</span></div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎥</span></div>
+                        <span class="badge">4K</span>
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>奥本海默</h3>
+                        <div class="meta"><span>传记</span><span>2023</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured two column: TV series + Rankings -->
+        <section class="container featured-section">
+            <div class="category-block">
+                <h3>📺 热播电视剧 <a href="#">更多 →</a></h3>
+                <div class="video-grid" style="grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px;">
+                    <div class="video-card">
+                        <div class="video-thumb">
+                            <div class="img-placeholder"><span class="icon">📺</span></div>
+                            <span class="badge">更新至24集</span>
+                        </div>
+                        <div class="video-info">
+                            <h3>庆余年2</h3>
+                            <div class="meta"><span>古装</span><span>2024</span></div>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumb">
+                            <div class="img-placeholder"><span class="icon">📺</span></div>
+                            <span class="badge">更新至16集</span>
+                        </div>
+                        <div class="video-info">
+                            <h3>与凤行</h3>
+                            <div class="meta"><span>古装</span><span>2024</span></div>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumb">
+                            <div class="img-placeholder"><span class="icon">📺</span></div>
+                            <span class="badge">更新至30集</span>
+                        </div>
+                        <div class="video-info">
+                            <h3>追风者</h3>
+                            <div class="meta"><span>谍战</span><span>2024</span></div>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumb">
+                            <div class="img-placeholder"><span class="icon">📺</span></div>
+                            <span class="badge">全40集</span>
+                        </div>
+                        <div class="video-info">
+                            <h3>繁花</h3>
+                            <div class="meta"><span>都市</span><span>2024</span></div>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumb">
+                            <div class="img-placeholder"><span class="icon">📺</span></div>
+                            <span class="badge">更新至18集</span>
+                        </div>
+                        <div class="video-info">
+                            <h3>南来北往</h3>
+                            <div class="meta"><span>年代</span><span>2024</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-block">
+                <h3>🏆 飙升榜 <a href="#">完整榜单 →</a></h3>
+                <div class="rank-list">
+                    <div class="rank-item">
+                        <div class="rank-num">1</div>
+                        <div class="rank-info">
+                            <p>热辣滚烫</p>
+                            <span>🔥 热度 98.2万</span>
+                        </div>
+                    </div>
+                    <div class="rank-item">
+                        <div class="rank-num">2</div>
+                        <div class="rank-info">
+                            <p>飞驰人生2</p>
+                            <span>🔥 热度 95.7万</span>
+                        </div>
+                    </div>
+                    <div class="rank-item">
+                        <div class="rank-num">3</div>
+                        <div class="rank-info">
+                            <p>第二十条</p>
+                            <span>🔥 热度 92.4万</span>
+                        </div>
+                    </div>
+                    <div class="rank-item">
+                        <div class="rank-num">4</div>
+                        <div class="rank-info">
+                            <p>三大队</p>
+                            <span>🔥 热度 88.9万</span>
+                        </div>
+                    </div>
+                    <div class="rank-item">
+                        <div class="rank-num">5</div>
+                        <div class="rank-info">
+                            <p>年会不能停</p>
+                            <span>🔥 热度 85.1万</span>
+                        </div>
+                    </div>
+                    <div class="rank-item">
+                        <div class="rank-num">6</div>
+                        <div class="rank-info">
+                            <p>金手指</p>
+                            <span>🔥 热度 82.3万</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anime / Variety -->
+        <section class="container">
+            <div class="section-title">
+                <h2>🎬 动漫·综艺专区</h2>
+                <a href="#" class="more-link">更多内容 →</a>
+            </div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎌</span></div>
+                        <span class="badge">连载</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>海贼王</h3>
+                        <div class="meta"><span>动漫</span><span>更新至1105集</span></div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎌</span></div>
+                        <span class="badge">完结</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>咒术回战</h3>
+                        <div class="meta"><span>动漫</span><span>全24集</span></div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎤</span></div>
+                        <span class="badge">更新中</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>奔跑吧兄弟</h3>
+                        <div class="meta"><span>综艺</span><span>2024-05-10</span></div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎤</span></div>
+                        <span class="badge">更新中</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>向往的生活</h3>
+                        <div class="meta"><span>综艺</span><span>2024-05-08</span></div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎤</span></div>
+                        <span class="badge">更新中</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>歌手2024</h3>
+                        <div class="meta"><span>综艺</span><span>每周五</span></div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="img-placeholder"><span class="icon">🎌</span></div>
+                        <span class="badge">完结</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>鬼灭之刃</h3>
+                        <div class="meta"><span>动漫</span><span>全26集</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content guide / intro -->
+        <section class="container">
+            <div class="category-block" style="margin-top: 20px;">
+                <h3>📖 关于4455永久在线视频</h3>
+                <p style="font-size: 15px; color: #444; margin-bottom: 12px; line-height: 1.8;">
+                    <strong>4455永久在线视频观看</strong>是一个致力于为用户提供便捷、稳定、高清在线视频服务的平台。我们聚合了来自全网优质的影视资源，涵盖院线大片、热播剧集、热门综艺、动漫番剧、纪录片等多种内容类型。平台采用多线路智能切换技术，有效解决视频卡顿问题，力求为用户打造“永久在线、随时可看”的观影体验。
+                </p>
+                <p style="font-size: 15px; color: #444; line-height: 1.8;">
+                    无论你是想追最新上线的院线电影，还是想补档经典高分剧集，亦或是寻找适合全家观看的综艺节目，在4455都能找到满意的内容。本站所有资源完全免费，无需注册即可观看大部分内容，同时也支持自定义播放清晰度，适应不同网络环境。我们建议用户收藏本站地址(可记住关键词“4455永久在线视频观看”进行搜索)，以便随时获取最新影视资讯和更新动态。
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container faq-section">
+            <div class="section-title">
+                <h2>❓ 常见问题解答</h2>
+            </div>
+            <div class="faq-item">
+                <h4>4455永久在线视频观看为什么无法打开？</h4>
+                <p>如果您遇到网站无法访问的情况，可能是由于网络波动或DNS解析问题。建议您尝试刷新页面、切换网络（如从Wi-Fi切换到移动数据），或使用浏览器的无痕模式访问。另外，您可以记住我们的备用域名或通过搜索引擎查找“4455永久在线视频观看”获取最新可用地址。</p>
+            </div>
+            <div class="faq-item">
+                <h4>视频播放卡顿或加载缓慢怎么办？</h4>
+                <p>视频卡顿通常与您的网络速度或设备性能有关。您可以尝试以下方法：1) 在播放器右下角切换至“流畅”或“标清”清晰度；2) 暂停缓冲1-2分钟后再播放；3) 清理浏览器缓存；4) 更换其他播放线路。我们的系统会自动为您选择最快的节点，但不同地区网络状况存在差异。</p>
+            </div>
+            <div class="faq-item">
+                <h4>4455永久在线视频是否完全免费？</h4>
+                <p>是的，4455永久在线视频观看平台的所有视频内容均免费提供给用户，无需支付任何费用。我们通过广告维持网站运营，如果您在观看过程中看到广告，属于正常现象。请勿相信任何要求付费解锁或转账的信息，本站不会向用户收取任何费用。</p>
+            </div>
+            <div class="faq-item">
+                <h4>如何获取最新的影视更新通知？</h4>
+                <p>您可以将本站添加到浏览器书签，并定期访问首页查看“最近更新”栏目。同时，我们也建议您关注页面上方的推荐位，那里会展示当下最热门、最新上线的影视作品。未来我们计划推出订阅功能，敬请期待。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">联系方式</a>
+                <a href="#">免责声明</a>
+                <a href="#">用户协议</a>
+                <a href="#">隐私政策</a>
+                <a href="#">意见反馈</a>
+                <a href="#">友情链接</a>
+            </div>
+            <p style="text-align:center; margin-bottom:10px; font-size:14px; color:#aab;">热门搜索：<a href="#">热辣滚烫</a> | <a href="#">庆余年2</a> | <a href="#">与凤行</a> | <a href="#">海贼王</a></p>
+            <div class="footer-copy">
+                <p>© 2024 4455永久在线视频观看 版权所有 本站资源均来源于网络，仅供学习交流使用，请于下载后24小时内删除。</p>
+                <p>温馨提示：为了您能正常访问本站，建议使用 Chrome、Edge 或 Firefox 浏览器。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 指定广告脚本 -->
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                                      </html>
