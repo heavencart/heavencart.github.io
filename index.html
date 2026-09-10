@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>youjizz吧-热门视频社区与观看指南</title>
+  <meta name="description" content="youjizz吧是一个专注视频分享与交流的社区，提供热门榜单、分类导航、高分推荐以及观看技巧与安全提示。">
+  <meta name="keywords" content="youjizz吧,视频社区,热门视频,视频导航,观看指南">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f5f7fa;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e1e2a;
+    }
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 头部 */
+    header {
+      background: #1f1f2e;
+      padding: 18px 0;
+      border-bottom: 3px solid #ff3d5f;
+    }
+    .header-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .logo span {
+      color: #ff3d5f;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+      font-size: 1.1rem;
+    }
+    .nav-links a:hover {
+      color: #ff8c9f;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #2a2a3b;
+      border-radius: 40px;
+      padding: 5px 15px;
+    }
+    .search-box input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 8px 6px;
+      width: 200px;
+      font-size: 0.95rem;
+    }
+    .search-box input::placeholder {
+      color: #888;
+    }
+    .search-box button {
+      background: #ff3d5f;
+      border: none;
+      color: white;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .search-box button:hover {
+      background: #d62e4d;
+    }
+
+    /* HERO 首屏 */
+    .hero {
+      background: linear-gradient(145deg, #1b1b28 0%, #2a1f2c 100%);
+      padding: 50px 0 60px;
+      border-radius: 0 0 40px 40px;
+      color: #fff;
+      margin-top: 10px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .hero h1 i {
+      color: #ff3d5f;
+      font-style: normal;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+      margin-bottom: 24px;
+      max-width: 600px;
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .btn {
+      display: inline-block;
+      background: #ff3d5f;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #ff8c9f;
+      color: #ffc7d1;
+    }
+    .btn-outline:hover {
+      background: rgba(255, 61, 95, 0.2);
+      color: #fff;
+    }
+    .hero-stats {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      padding: 24px;
+      border-radius: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .stat-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 12px;
+    }
+    .stat-item:last-child {
+      border-bottom: none;
+    }
+    .stat-num {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #ff9aab;
+    }
+    .stat-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.7;
+    }
+
+    /* 分类导航卡片 */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 50px 0 25px;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 70%;
+      height: 4px;
+      background: #ff3d5f;
+      border-radius: 4px;
+    }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px;
+    }
+    .cat-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 22px 12px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+      transition: 0.2s;
+      border: 1px solid #eceef3;
+    }
+    .cat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07);
+    }
+    .cat-icon {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+    .cat-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .cat-count {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    /* 热门榜单区块 */
+    .hot-section {
+      background: #fff;
+      border-radius: 36px;
+      padding: 30px 30px 40px;
+      margin: 40px 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    }
+    .hot-flex {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+    .hot-card {
+      background: #fafbfd;
+      border-radius: 24px;
+      padding: 20px;
+      transition: 0.2s;
+      border: 1px solid #e9ebf0;
+    }
+    .hot-card:hover {
+      background: #fff;
+      border-color: #ffb6c2;
+    }
+    .hot-rank {
+      display: inline-block;
+      background: #ff3d5f;
+      color: white;
+      font-weight: 700;
+      width: 32px;
+      height: 32px;
+      border-radius: 12px;
+      text-align: center;
+      line-height: 32px;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    .hot-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .hot-meta {
+      font-size: 0.9rem;
+      color: #6a6e7a;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+    }
+    .tag {
+      background: #ebf0f7;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      color: #1e293b;
+    }
+
+    /* 双栏：最新更新 + 浏览指南 */
+    .dual-column {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    .update-list, .guide-box {
+      background: #fff;
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+    .update-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid #eef0f4;
+    }
+    .update-item:last-child {
+      border-bottom: none;
+    }
+    .update-title {
+      font-weight: 600;
+    }
+    .update-time {
+      color: #9aa1af;
+      font-size: 0.9rem;
+    }
+    .guide-box h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    .guide-list {
+      list-style: none;
+    }
+    .guide-list li {
+      margin-bottom: 18px;
+      padding-left: 28px;
+      position: relative;
+    }
+    .guide-list li:before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: #ff3d5f;
+      font-size: 0.9rem;
+    }
+
+    /* FAQ */
+    .faq-section {
+      margin: 40px 0 50px;
+    }
+    .faq-item {
+      background: white;
+      border-radius: 20px;
+      padding: 20px 26px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    }
+    .faq-q {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    .faq-a {
+      color: #3c3f4a;
+    }
+
+    /* 页脚 */
+    footer {
+      background: #16161f;
+      color: #9e9eae;
+      padding: 40px 0 20px;
+      margin-top: 40px;
+      border-radius: 30px 30px 0 0;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 8px;
+    }
+    .footer-col a {
+      color: #aaa;
+      text-decoration: none;
+    }
+    .footer-col a:hover {
+      color: #ff8c9f;
+    }
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2a2a3c;
+      padding-top: 16px;
+      font-size: 0.9rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 900px) {
+      .hero-grid, .dual-column {
+        grid-template-columns: 1fr;
+      }
+      .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      .search-box {
+        width: 100%;
+      }
+      .search-box input {
+        flex: 1;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+    @media (max-width: 500px) {
+      .wrapper {
+        padding: 0 15px;
+      }
+      .nav-links {
+        gap: 16px;
+      }
+      .btn {
+        padding: 10px 20px;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+  <header>
+    <div class="wrapper header-flex">
+      <div class="logo">youjizz<span>吧</span></div>
+      <nav class="nav-links">
+        <a href="#">首页</a>
+        <a href="#">排行榜</a>
+        <a href="#">分类</a>
+        <a href="#">社区</a>
+        <a href="#">观看指南</a>
+      </nav>
+      <div class="search-box">
+        <input type="text" placeholder="搜索视频、标签...">
+        <button type="button">搜索</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>发现最热视频<br>尽在 <i>youjizz吧</i></h1>
+          <p>每日更新热门榜单、深度分类导航与新手观看攻略。聚合社区精选，帮助你快速找到感兴趣的内容。</p>
+          <div class="hero-buttons">
+            <a href="#" class="btn">浏览热门</a>
+            <a href="#" class="btn btn-outline">社区讨论</a>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-label">今日新增</span>
+            <span class="stat-num">1.2k</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">视频总数</span>
+            <span class="stat-num">58k+</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">活跃用户</span>
+            <span class="stat-num">9.4k</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">社区帖子</span>
+            <span class="stat-num">15k+</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分类导航 -->
+    <section>
+      <h2 class="section-title">视频分类导航</h2>
+      <div class="category-grid">
+        <div class="cat-card"><div class="cat-icon">🔥</div><div class="cat-title">热门精选</div><div class="cat-count">3.2k 内容</div></div>
+        <div class="cat-card"><div class="cat-icon">🎬</div><div class="cat-title">电影片段</div><div class="cat-count">1.8k 内容</div></div>
+        <div class="cat-card"><div class="cat-icon">📺</div><div class="cat-title">剧集混剪</div><div class="cat-count">2.5k 内容</div></div>
+        <div class="cat-card"><div class="cat-icon">🎵</div><div class="cat-title">音乐现场</div><div class="cat-count">2.1k 内容</div></div>
+        <div class="cat-card"><div class="cat-icon">👤</div><div class="cat-title">创作者</div><div class="cat-count">900 内容</div></div>
+        <div class="cat-card"><div class="cat-icon">🌐</div><div class="cat-title">海外精选</div><div class="cat-count">1.4k 内容</div></div>
+      </div>
+    </section>
+
+    <!-- 热门榜单 -->
+    <section class="hot-section">
+      <h2 class="section-title" style="margin-top:0;">🔥 本周热门排行</h2>
+      <div class="hot-flex">
+        <div class="hot-card">
+          <span class="hot-rank">1</span>
+          <h3>午夜影院 · 惊悚混剪</h3>
+          <div class="hot-meta"><span>观看 45.2w</span><span class="tag">高分</span></div>
+        </div>
+        <div class="hot-card">
+          <span class="hot-rank">2</span>
+          <h3>超燃动作合集 2025</h3>
+          <div class="hot-meta"><span>观看 38.7w</span><span class="tag">动作</span></div>
+        </div>
+        <div class="hot-card">
+          <span class="hot-rank">3</span>
+          <h3>经典科幻系列解说</h3>
+          <div class="hot-meta"><span>观看 31.9w</span><span class="tag">科幻</span></div>
+        </div>
+        <div class="hot-card">
+          <span class="hot-rank">4</span>
+          <h3>独立导演新作首映</h3>
+          <div class="hot-meta"><span>观看 28.4w</span><span class="tag">独立</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 双栏：最新更新 + 指南 -->
+    <div class="dual-column">
+      <div class="update-list">
+        <h3 style="font-size:1.6rem; margin-bottom:12px;">📌 最近更新</h3>
+        <div class="update-item"><span class="update-title">【4K修复】经典老片重制版</span><span class="update-time">25分钟前</span></div>
+        <div class="update-item"><span class="update-title">Vlog 日常 · 创作者访谈</span><span class="update-time">1小时前</span></div>
+        <div class="update-item"><span class="update-title">影史冷知识：第3期</span><span class="update-time">3小时前</span></div>
+        <div class="update-item"><span class="update-title">动作设计幕后花絮</span><span class="update-time">6小时前</span></div>
+        <div class="update-item"><span class="update-title">观众票选最佳片段Top10</span><span class="update-time">昨天</span></div>
+      </div>
+      <div class="guide-box">
+        <h3>🎯 观看指南</h3>
+        <ul class="guide-list">
+          <li><strong>新手指南：</strong> 注册后即可收藏与点赞，建立你的专属片单。</li>
+          <li><strong>高清设置：</strong> 点击播放器右下角可切换画质，流畅观看。</li>
+          <li><strong>社区互动：</strong> 在讨论区分享感受，参与每周话题。</li>
+          <li><strong>安全提示：</strong> 请勿下载未知来源文件，谨防钓鱼链接。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <h2 class="section-title">常见问题 FAQ</h2>
+      <div class="faq-item">
+        <div class="faq-q">youjizz吧的视频可以下载吗？</div>
+        <div class="faq-a">出于版权保护，网页端暂不支持直接下载，但你可以使用官方APP内的离线缓存功能（仅限部分内容）。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">为什么有些视频打不开？</div>
+        <div class="faq-a">可能是区域限制或网络波动。建议尝试切换网络、刷新页面或更换浏览器。若持续无法播放，可反馈给管理员。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">如何举报不良内容？</div>
+        <div class="faq-a">每个视频下方均有“举报”按钮，提交后我们会在24小时内审核处理。你也可以通过页面底部的联系邮箱反馈。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">如何参与社区互动？</div>
+        <div class="faq-a">注册youjizz吧账号后，即可在视频下评论、加入兴趣小组、发帖参与热门话题讨论。</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>youjizz吧导航</h4>
+          <ul>
+            <li><a href="#">热门视频</a></li>
+            <li><a href="#">最新更新</a></li>
+            <li><a href="#">高分片单</a></li>
+            <li><a href="#">分类大全</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>社区与支持</h4>
+          <ul>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">社区守则</a></li>
+            <li><a href="#">内容申诉</a></li>
+            <li><a href="#">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>安全与条款</h4>
+          <ul>
+            <li><a href="#">隐私政策</a></li>
+            <li><a href="#">服务条款</a></li>
+            <li><a href="#">Cookie设置</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2025 youjizz吧 · 仅供学习交流 · 请遵守当地法律法规
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
