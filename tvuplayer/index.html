@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tvuplayer官网 - 智能电视视频播放器下载与使用指南</title>
+    <meta name="description" content="tvuplayer官网提供TVUPlayer智能电视视频播放器最新版本下载，支持本地网络播放、多格式解码，适用于安卓智能电视与电视盒子。查看功能介绍、安装教程与常见问题解答。">
+    <meta name="keywords" content="tvuplayer,TVUPlayer,电视播放器,智能电视视频播放器,安卓电视播放器,tvuplayer下载,TV播放软件">
+    <link rel="stylesheet" href="data:text/css;base64,LypyZXNldCovKi8q">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #0f172a;
+            color: #fff;
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #fff;
+        }
+        nav.main-nav ul {
+            display: flex;
+            gap: 28px;
+            font-weight: 500;
+        }
+        nav.main-nav a {
+            color: #cbd5e1;
+            transition: color 0.2s;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+        }
+        nav.main-nav a:hover {
+            color: #fff;
+            border-bottom-color: #3b82f6;
+        }
+        .nav-download {
+            background-color: #3b82f6;
+            padding: 8px 20px !important;
+            border-radius: 24px;
+            color: #fff !important;
+            font-weight: 600;
+            border-bottom: none !important;
+            transition: background 0.2s;
+        }
+        .nav-download:hover {
+            background-color: #2563eb;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #1e3a8a 100%);
+            color: #fff;
+            padding: 70px 0 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+        .hero .subhead {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary {
+            background: #3b82f6;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(59,130,246,0.4);
+        }
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #e2e8f0;
+            border: 2px solid #475569;
+        }
+        .btn-outline:hover {
+            border-color: #94a3b8;
+            transform: translateY(-2px);
+        }
+        .hero-meta {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #64748b;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .featured-section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+        .section-sub {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 44px;
+            font-size: 1rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border-top: 4px solid #3b82f6;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .feature-card .icon {
+            font-size: 2.2rem;
+            margin-bottom: 14px;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+        .feature-card p {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+        .download-section {
+            background: #fff;
+            padding: 50px 0;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .download-flex {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .download-info {
+            flex: 1 1 300px;
+        }
+        .download-info h2 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            color: #0f172a;
+        }
+        .download-info p {
+            color: #475569;
+            margin-bottom: 20px;
+        }
+        .version-list {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 16px 20px;
+            flex: 1 1 300px;
+        }
+        .version-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #cbd5e1;
+        }
+        .version-item:last-child {
+            border-bottom: none;
+        }
+        .version-name {
+            font-weight: 600;
+        }
+        .version-tag {
+            background: #3b82f6;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .version-size {
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+        .download-btn {
+            background: #16a34a;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .guide-section {
+            padding: 60px 0;
+        }
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .guide-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .guide-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #0f172a;
+        }
+        .guide-card ol {
+            padding-left: 20px;
+            color: #334155;
+        }
+        .guide-card ol li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        .guide-card ul {
+            padding-left: 20px;
+            color: #334155;
+            list-style: disc;
+        }
+        .guide-card ul li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .faq-section {
+            background: #f1f5f9;
+            padding: 60px 0;
+        }
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .faq-item h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: #0f172a;
+            font-weight: 600;
+        }
+        .faq-item p {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+        .compat-section {
+            padding: 50px 0;
+            background: #fff;
+        }
+        .compat-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .compat-badge {
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border: 1px solid #c7d2fe;
+        }
+        .notice-box {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 0.95rem;
+            color: #78350f;
+        }
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0 30px;
+            font-size: 0.9rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-col h4 {
+            color: #e2e8f0;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        .footer-col a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding-top: 20px;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 12px;
+            }
+            nav.main-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .download-flex {
+                flex-direction: column;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                padding: 50px 0 40px;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 20px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo" aria-label="tvuplayer官网首页">
+                <span class="logo-icon">TV</span>
+                <span>TVUPlayer</span>
+            </a>
+            <nav class="main-nav" aria-label="主导航">
+                <ul>
+                    <li><a href="#features">功能特色</a></li>
+                    <li><a href="#download">下载</a></li>
+                    <li><a href="#guide">安装指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#download" class="nav-download">立即下载</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 首屏 Hero -->
+        <section class="hero">
+            <div class="container">
+                <h1>TVUPlayer 智能电视视频播放器</h1>
+                <p class="subhead">专为安卓智能电视与电视盒子打造的本地网络视频播放解决方案，支持多格式硬解、局域网共享与字幕加载，让大屏观影更简单流畅。</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">下载最新版本</a>
+                    <a href="#guide" class="btn btn-outline">查看安装教程</a>
+                </div>
+                <div class="hero-meta">
+                    <span>✔ 最新版本 v2.4.1</span>
+                    <span>✔ 支持 Android 5.0+</span>
+                    <span>✔ 完全免费无广告</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 功能特色 -->
+        <section class="featured-section" id="features">
+            <div class="container">
+                <h2 class="section-title">强大而实用的播放功能</h2>
+                <p class="section-sub">TVUPlayer 针对电视遥控器操作和大屏显示场景进行了深度优化</p>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="icon">📺</div>
+                        <h3>本地与网络播放</h3>
+                        <p>支持读取本地USB存储、移动硬盘以及通过SMB/NFS协议访问电脑或NAS中的视频文件，轻松打造家庭影音中心。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon">🎞️</div>
+                        <h3>全格式硬解码</h3>
+                        <p>内置高效解码引擎，支持 MKV、MP4、AVI、TS、ISO 等主流容器，以及 H.265/HEVC、VP9 等编码格式，播放4K视频依然流畅。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon">🔤</div>
+                        <h3>智能字幕加载</h3>
+                        <p>自动识别并加载同名字幕文件，支持 SRT、ASS、SSA 等格式，可调节字幕大小、颜色和编码，外挂字幕无忧。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon">🎮</div>
+                        <h3>遥控器专属操作</h3>
+                        <p>针对电视遥控器重新设计的交互界面，方向键控制、OK键确认，长按快进快退，操作直观高效，无需鼠标键盘。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon">📁</div>
+                        <h3>海报墙媒体库</h3>
+                        <p>自动扫描设备与网络共享中的影片，匹配海报、简介和评分，以精美的海报墙形式展示，收藏与续播一目了然。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon">🔄</div>
+                        <h3>音轨与多语言</h3>
+                        <p>支持多音轨快速切换，内置AC3/DTS解码，兼容多种音频输出模式，同时提供简体中文、英文等多语言界面。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下载区域 -->
+        <section class="download-section" id="download">
+            <div class="container download-flex">
+                <div class="download-info">
+                    <h2>下载 TVUPlayer</h2>
+                    <p>请根据您的设备类型选择合适的安装包。TVUPlayer 适用于绝大多数安卓智能电视（小米、海信、创维、TCL、索尼等）以及天猫魔盒、小米盒子、当贝盒子等电视盒子。</p>
+                    <p>如果您的设备无法安装通用版，请尝试下载TV专用版本。</p>
+                    <a href="#" class="btn btn-primary">📥 下载 APK 安装包</a>
+                    <p style="margin-top: 12px; font-size: 0.9rem; color: #64748b;">最新版本 v2.4.1 | 更新日期：2025年2月</p>
+                </div>
+                <div class="version-list">
+                    <div style="font-weight: 700; margin-bottom: 8px; font-size: 1.1rem;">历史版本与渠道</div>
+                    <div class="version-item">
+                        <span class="version-name">TVUPlayer v2.4.1 <span class="version-tag">最新</span></span>
+                        <span class="version-size">32MB</span>
+                        <a href="#" class="download-btn">下载</a>
+                    </div>
+                    <div class="version-item">
+                        <span class="version-name">TVUPlayer v2.3.8 稳定版</span>
+                        <span class="version-size">30MB</span>
+                        <a href="#" class="download-btn">下载</a>
+                    </div>
+                    <div class="version-item">
+                        <span class="version-name">TVUPlayer v2.2.5 (旧版兼容)</span>
+                        <span class="version-size">28MB</span>
+                        <a href="#" class="download-btn">下载</a>
+                    </div>
+                    <div class="version-item">
+                        <span class="version-name">TVUPlayer 手机遥控版</span>
+                        <span class="version-size">18MB</span>
+                        <a href="#" class="download-btn">下载</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 安装与使用指南 -->
+        <section class="guide-section" id="guide">
+            <div class="container">
+                <h2 class="section-title">快速安装与使用指南</h2>
+                <p class="section-sub">无论您是初次接触还是升级安装，以下步骤都能帮助您顺利使用TVUPlayer</p>
+                <div class="guide-grid">
+                    <article class="guide-card">
+                        <h3>📲 安装步骤</h3>
+                        <ol>
+                            <li>点击上方“下载APK安装包”，将文件保存到U盘或通过局域网传输到电视。</li>
+                            <li>在电视上打开文件管理器，找到下载的 .apk 文件。</li>
+                            <li>如提示“未知来源”或“安装权限”，请先在安全设置中允许安装未知应用。</li>
+                            <li>点击文件进行安装，等待几秒即可完成。</li>
+                            <li>安装完成后，在应用列表中找到“TVUPlayer”并打开。</li>
+                        </ol>
+                    </article>
+                    <article class="guide-card">
+                        <h3>🔧 连接网络共享</h3>
+                        <ol>
+                            <li>确保电视和电脑/NAS处于同一局域网。</li>
+                            <li>在TVUPlayer主界面选择“网络”或“添加设备”。</li>
+                            <li>选择 SMB 或 NFS 协议，输入主机IP地址、用户名及密码。</li>
+                            <li>连接成功后，即可浏览共享文件夹中的影音资源。</li>
+                            <li>建议将常用共享文件夹添加为收藏，方便下次快速访问。</li>
+                        </ol>
+                    </article>
+                    <article class="guide-card">
+                        <h3>💡 使用小贴士</h3>
+                        <ul>
+                            <li>播放4K视频时，建议使用有线网络连接以保证带宽稳定。</li>
+                            <li>字幕乱码时，可在播放设置中切换字幕编码为“UTF-8”或“简体中文”。</li>
+                            <li>若遇到音画不同步，尝试在播放菜单中调整音频延迟。</li>
+                            <li>通过媒体库扫描时，可指定文件夹路径，避免扫描非影音目录。</li>
+                        </ul>
+                    </article>
+                    <article class="guide-card">
+                        <h3>⚠️ 安全提示</h3>
+                        <ul>
+                            <li>请从官方网站或可信渠道下载，避免使用修改版安装包。</li>
+                            <li>TVUPlayer 本身不含任何广告及恶意插件，开源透明。</li>
+                            <li>如果安装时提示风险，请核对下载文件的MD5校验值。</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="notice-box">
+                    <strong>📢 官方声明：</strong> TVUPlayer 不提供任何内置在线视频源，也不包含直播频道。请用户通过合法途径获取影视资源，本软件仅作为本地与网络播放工具使用。
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-sub">针对用户最关心的问题，我们在这里为您一一解答</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Q: TVUPlayer 支持哪些电视型号？</h3>
+                        <p>TVUPlayer 基于安卓系统开发，支持 Android 5.0 及以上版本的智能电视和电视盒子。常见的小米、海信、创维、TCL、索尼、华为智慧屏等均可安装。非安卓系统的电视（如LG webOS、三星Tizen）暂时无法使用。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: 播放卡顿或无法解码怎么办？</h3>
+                        <p>首先确认视频文件是否完整，尝试更换播放器内核（在设置中切换为“软件解码”或“硬件解码”）。对于高码率4K视频，建议使用千兆有线网络连接NAS或电脑。也可以尝试降低画面输出为1080P。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: 如何通过手机推送视频到电视播放？</h3>
+                        <p>部分版本支持DLNA或AirPlay接收功能。您可以在手机视频App中找到“投屏”选项，选择电视上的TVUPlayer作为接收设备。但需注意，TVUPlayer主要定位为播放器，投屏兼容性取决于手机端App。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: 为什么无法识别U盘中的ISO蓝光原盘？</h3>
+                        <p>TVUPlayer 支持ISO文件的播放，但部分蓝光原盘包含复杂的目录结构，可能无法完整显示菜单。建议将原盘中的主影片文件（通常为最大的 .m2ts 文件）单独提取播放。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: 是否提供iOS版本或电脑版本？</h3>
+                        <p>目前TVUPlayer仅提供Android TV版和Android手机版。iOS用户可考虑使用其他支持SMB的播放器。电脑用户建议使用VLC或PotPlayer，功能类似。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: 如何反馈Bug或提出建议？</h3>
+                        <p>您可以在官网的“意见反馈”入口提交问题，或发送邮件至官方支持邮箱。反馈时请提供设备型号、系统版本、播放文件信息以及错误日志截图，以帮助我们更快定位问题。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 兼容性与系统要求 -->
+        <section class="compat-section">
+            <div class="container">
+                <h2 class="section-title">系统要求与兼容性</h2>
+                <p class="section-sub">TVUPlayer 致力于覆盖主流设备，以下为推荐运行环境</p>
+                <div class="compat-flex">
+                    <span class="compat-badge">Android 5.0 及以上</span>
+                    <span class="compat-badge">RAM 1GB 以上</span>
+                    <span class="compat-badge">支持 ARM / x86 架构</span>
+                    <span class="compat-badge">支持 4K HDR 输出</span>
+                    <span class="compat-badge">支持 AC3 / DTS 音频</span>
+                    <span class="compat-badge">支持 SMB v1/v2/v3</span>
+                    <span class="compat-badge">支持 NFS 协议</span>
+                    <span class="compat-badge">支持外挂字幕</span>
+                </div>
+                <p style="text-align: center; margin-top: 30px; color: #64748b;">如果你的设备配置较低，建议使用经典版本 v2.2.5 以获得更流畅的播放体验。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>TVUPlayer</h4>
+                    <p>TVUPlayer 是一款开源、免费、无广告的智能电视视频播放器。我们专注于提供稳定、可靠、高画质的本地与网络播放体验，致力于成为您电视上的万能播放器。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">版本更新日志</a></li>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持与帮助</h4>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">开发者社区</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">联系邮箱</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 TVUPlayer 官方网站 - 保留所有权利。本站为TVUPlayer官方信息发布平台。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
